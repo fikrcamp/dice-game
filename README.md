@@ -9,4 +9,4 @@ The dice game is a two player game. Each turn, a player repeatedly rolls a die u
 
 The starter folder has the beginning code of the design of the game but not javascript functionality, we will be doing that together!😊
 
-## https://ahmetmohamet281.github.io/dice-game/
+# https://ahmetmohamet281.github.io/dice-game/
