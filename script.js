@@ -1,7 +1,7 @@
 //getting elements
 const dice = document.querySelector(".dice")
-const player01 = document.querySelector("#player--0");
-const player02 = document.querySelector("#player--1");
+const player01 = document.querySelector(".player--0");
+const player02 = document.querySelector(".player--1");
 const score01 = document.querySelector("#score--0");
 const score02 = document.querySelector("#score--1");
 const rollBtn = document.querySelector(".btn--roll");
@@ -16,6 +16,9 @@ score01.innerText = 0;
 score02.innerText = 0;
 let gamePlaying = true;
 
+player01.classList.add("player--active")
+player02.classList.remove("player--active")
+
 
 function playerSwitch(){
     currentScore = 0 
@@ -23,7 +26,9 @@ function playerSwitch(){
             currentPlayer = 1
         }else{
             currentPlayer = 0
-        }
+       }
+    player01.classList.toggle("player--active")
+    player02.classList.toggle("player--active")
 }
 
 //User roles dice
@@ -73,5 +78,8 @@ newBtn.addEventListener('click', function(){
     dice.src = `dice-5.png`;
     score01.innerText = 0;
     score02.innerText = 0;
-    document.querySelector(`.player--${currentPlayer}`).classList.remove("player--winner"); 
+    dice.classList.remove("hidden");
+    gamePlaying= true;
+    player01.classList.remove("player--winner");
+    player02.classList.remove("player--winner");
 })
